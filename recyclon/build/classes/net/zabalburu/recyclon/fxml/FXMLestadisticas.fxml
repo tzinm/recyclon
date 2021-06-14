@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Polyline?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane id="BorderPanePrincipal" fx:id="borderPanePrincipal" maxHeight="790.0" maxWidth="1202.0" minHeight="790.0" minWidth="1202.0" prefHeight="790.0" prefWidth="1202.0" stylesheets="@../css/estilo1.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.zabalburu.recyclon.app.FXMLestadisticasController">
+   <center>
+      <AnchorPane maxHeight="790.0" maxWidth="1202.0" minHeight="790.0" minWidth="1202.0" prefHeight="790.0" prefWidth="1202.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="43.0" layoutX="30.0" layoutY="123.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1143.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color blue="0.3450980484485626" green="0.2823529541492462" red="0.18431372940540314" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.007662835249042145">
+                           <color>
+                              <Color blue="0.3450980484485626" green="0.2823529541492462" red="0.18431372940540314" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.584192439862543">
+                           <color>
+                              <Color blue="0.6451666951179504" green="0.7900000214576721" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color blue="0.6470588445663452" green="0.7921568751335144" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <AnchorPane layoutX="723.0" layoutY="174.0" prefHeight="595.0" prefWidth="448.0" style="-fx-background-color: #00caa5;">
+               <children>
+                  <BarChart id="BarChart" fx:id="bcCuentas" alternativeRowFillVisible="false" barGap="2.0" categoryGap="5.0" horizontalGridLinesVisible="false" horizontalZeroLineVisible="false" layoutX="8.0" layoutY="6.0" prefHeight="578.0" prefWidth="422.0" title="Balance General de Cuentas" verticalGridLinesVisible="false" verticalZeroLineVisible="false" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="18.0" AnchorPane.topAnchor="6.0">
+                    <xAxis>
+                      <CategoryAxis prefWidth="183.0" side="BOTTOM" fx:id="xAxis" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis fx:id="yAxis" side="LEFT" />
+                    </yAxis>
+                  </BarChart>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </AnchorPane>
+            <AnchorPane layoutX="17.0" layoutY="160.0" prefHeight="615.0" prefWidth="687.0" style="-fx-background-radius: 3em;">
+               <children>
+                  <Rectangle id="menuIzquierda" arcHeight="5.0" arcWidth="5.0" fill="#007189" height="289.0" layoutX="14.0" layoutY="318.0" stroke="BLACK" strokeType="INSIDE" width="328.0" />
+                  <Rectangle id="menuIzquierda" arcHeight="5.0" arcWidth="5.0" fill="#007189" height="289.0" layoutX="352.0" layoutY="318.0" stroke="BLACK" strokeType="INSIDE" width="328.0" />
+                  <Rectangle id="menuIzquierda" arcHeight="5.0" arcWidth="5.0" fill="#2f4858" height="289.0" layoutX="14.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" width="328.0" />
+                  <Label layoutX="32.0" layoutY="35.0" text="Clientes:" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="32.0" layoutY="74.0" text="Proveedores:" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="32.0" layoutY="108.0" text="Bancos:" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="32.0" layoutY="144.0" text="Pagos realizados:" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="32.0" layoutY="182.0" text="Cobros realizados:" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="32.0" layoutY="220.0" text="Pagos por efectuar:" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="32.0" layoutY="261.0" text="Cobros por efectuar" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="clientes" alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="209.0" layoutY="30.0" prefHeight="34.0" prefWidth="124.0" text="15" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="proveedores" alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="209.0" layoutY="69.0" prefHeight="34.0" prefWidth="124.0" text="20" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="bancos" alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="209.0" layoutY="107.0" prefHeight="34.0" prefWidth="124.0" text="5" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="pRealizados" alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="209.0" layoutY="141.0" prefHeight="34.0" prefWidth="124.0" text="300" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="cRealizados" alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="209.0" layoutY="176.0" prefHeight="34.0" prefWidth="124.0" text="450" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="pPorEfectuar" alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="209.0" layoutY="215.0" prefHeight="34.0" prefWidth="124.0" text="30" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="cPorEfectuar" alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="209.0" layoutY="255.0" prefHeight="34.0" prefWidth="124.0" text="256" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                  </Label>
+                  <Rectangle id="menuIzquierda" arcHeight="5.0" arcWidth="5.0" fill="#007189" height="289.0" layoutX="352.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" width="328.0" />
+                  <PieChart id="PieChart" fx:id="pcClientes" labelLineLength="5.0" labelsVisible="false" layoutX="363.0" layoutY="33.0" onMousePressed="#mostrarPorcentajeC" prefHeight="252.0" prefWidth="305.0" title="Clientes" />
+                  <PieChart id="PieChart" fx:id="pcBancos" labelLineLength="5.0" labelsVisible="false" layoutX="364.0" layoutY="337.0" onMousePressed="#mostrarPorcentajeB" prefHeight="252.0" prefWidth="305.0" title="Bancos" />
+                  <PieChart id="PieChart" fx:id="pcProveedores" labelLineLength="5.0" labelsVisible="false" layoutX="26.0" layoutY="337.0" onMousePressed="#mostrarPorcentajeP" prefHeight="252.0" prefWidth="305.0" title="Proveedores" />
+                  <Label fx:id="lblpor" alignment="CENTER" contentDisplay="CENTER" layoutX="477.0" layoutY="446.0" prefHeight="34.0" prefWidth="79.0" text="\%" textFill="WHITE" visible="false">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </AnchorPane>
+            <Text layoutX="220.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Graficos y Estadisticas Generales" textAlignment="CENTER" wrappingWidth="380.484375">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <DatePicker fx:id="dpDesde" layoutX="537.0" layoutY="131.0" onAction="#fechas" prefHeight="28.0" prefWidth="175.0" />
+            <DatePicker fx:id="dpHasta" layoutX="810.0" layoutY="131.0" onAction="#fechas" prefHeight="28.0" prefWidth="175.0" />
+            <Label layoutX="454.0" layoutY="134.0" text="Desde:" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="732.0" layoutY="133.0" text="Hasta:" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnlimFDesde" layoutX="659.0" layoutY="135.0" maxHeight="20.0" maxWidth="24.0" minHeight="20.0" minWidth="24.0" mnemonicParsing="false" onAction="#limpiarFDesde" prefHeight="20.0" prefWidth="24.0" styleClass="btnlimF" stylesheets="@../css/estilo1.css">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" styleClass="imgBtn">
+                     <image>
+                        <Image url="@../img/clear%20(2).png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnlimFHasta" layoutX="933.0" layoutY="136.0" maxHeight="20.0" maxWidth="24.0" minHeight="20.0" minWidth="24.0" mnemonicParsing="false" onAction="#limpiarFHasta" prefHeight="20.0" prefWidth="24.0" styleClass="btnlimF" stylesheets="@../css/estilo1.css">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" styleClass="imgBtn">
+                     <image>
+                        <Image url="@../img/clear%20(2).png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Polyline layoutX="185.0" layoutY="141.0" points="985.0, -33.0, 985.0, -56.2109375, -155.0, -112.0, -155.0, -33.0" strokeType="INSIDE" strokeWidth="0.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color blue="0.3450980484485626" green="0.2823529541492462" red="0.18431372940540314" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.007662835249042145">
+                           <color>
+                              <Color blue="0.3450980484485626" green="0.2823529541492462" red="0.18431372940540314" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.584192439862543">
+                           <color>
+                              <Color blue="0.6451666951179504" green="0.7900000214576721" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color blue="0.6470588445663452" green="0.7921568751335144" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Polyline>
+            <Text fill="WHITE" layoutX="117.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gráficos">
+               <font>
+                  <Font name="Bank Gothic Medium BT" size="40.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="79.0" fitWidth="68.0" layoutX="42.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/graficos.png" />
+               </image>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+            <Label layoutX="219.0" layoutY="133.0" text="Aplicar filtros de fechas:" textFill="WHITE" underline="true">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

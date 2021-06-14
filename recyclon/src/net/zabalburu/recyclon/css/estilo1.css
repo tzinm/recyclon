@@ -1,0 +1,156 @@
+#fondoPantalla{
+    -fx-background-color: white;
+}
+
+#menuIzquierda{
+    -fx-background-color: linear-gradient(to bottom, #2f4858, #007189, #009da5, #00caa5);
+}
+
+#menuSuperior{
+    -fx-background-color:#2f4858;
+}
+
+#footer{
+    -fx-background-color:#00caa5;
+}
+
+#panelInfo{
+    -fx-background-color:#2f4858;
+}
+
+.button{
+    -fx-background-color:  transparent;
+    -fx-cursor: hand;
+    -fx-text-fill: white;
+}
+
+.button:hover {
+    -fx-background-color:#2f4858;
+    -fx-text-fill:#00caa5;
+}
+
+.button:pressed, .button:default:hover:pressed {
+    -fx-background-color: #009da5;
+    -fx-text-fill: white;
+}
+
+.button:focused {
+    -fx-border-color: white, white;
+    -fx-border-width:0, 1, 1,0;
+    -fx-border-style: solid;
+    -fx-border-radius: 0, 0;
+    -fx-border-insets: 1 1 1 1, 0;
+    -fx-text-fill: white;
+}
+
+.button:disabled, .button:default:disabled {
+    -fx-opacity: 0.4;
+    -fx-background-color: #1d1d1d;
+    -fx-text-fill: white;
+}
+
+.button:default {
+    -fx-background-color: -fx-focus-color;
+    -fx-text-fill: white;
+}
+
+.button:default:hover {
+    -fx-background-color: derive(-fx-focus-color,30%);
+    -fx-text-fill: white;
+}
+
+.menu-bar > .container > .menu-button > .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.menu-bar > .container > .menu-button:hover > .label,
+.menu-bar > .container > .menu-button:focused > .label,
+.menu-bar > .container > .menu-button:showing  > .label {
+    -fx-text-fill: black;
+}
+
+.menu-bar > .container > .menu-button:hover,
+.menu-bar > .container > .menu-button:focused,
+.menu-bar > .container > .menu-button:showing {
+    -fx-background: #00caa5;
+    -fx-background-color: #00caa5;
+}
+
+.menu-item {
+    -fx-background-color:#00caa5;
+    -fx-border-color: #00caa5;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+}
+
+#btnGuardar{
+    -fx-background-color: linear-gradient(to bottom, #2f4858, #007189, #009da5, #00caa5);
+}
+
+#btnGuardar:pressed, #btnGuardar:default:hover:pressed {
+    -fx-background-color: #009da5;
+    -fx-text-fill: #ffffff;
+}
+
+#btnGuardar:hover {
+    -fx-background-color:#2f4858;
+    -fx-text-fill:#00caa5;
+}
+
+.chart-title{
+    -fx-text-fill: #ffffff;
+}
+
+.axis {
+    -fx-text-fill: #ffffff;
+}
+
+.text-input:error {
+    -fx-text-fill: red;
+    -fx-border-insets: 0;
+    -fx-border-width: 2px;
+    -fx-border-color: red;
+    -fx-border-style: solid;
+    -fx-background-color: white;
+}
+
+.btnlimF {
+    -fx-background-color: white;
+}
+
+.btnlimF:pressed, .button:default:hover:pressed {
+    -fx-background-color: transparent;
+}
+
+.btnlimF:hover {    
+    -fx-background-color: transparent;
+}
+
+.btnlimF:disabled, .btnlimF:default:disabled {
+    -fx-background-color: transparent;
+}
+
+.btnlimF:hover {
+    -fx-graphic: url(../img/limpiar.png);
+}
+
+.btnExportar {
+    -fx-background-color: transparent;
+}
+
+.btnExportar:pressed, .btnExportar:default:hover:pressed {
+    -fx-background-color: transparent;
+}
+
+.btnExportar:hover {    
+    -fx-background-color: transparent;
+}
+
+.btnExportar:disabled, .btnExportar:default:disabled {
+    -fx-background-color: transparent;
+}
+
+.btnExportar:hover {
+    -fx-graphic: url(../img/exportCsvHover.png);
+}

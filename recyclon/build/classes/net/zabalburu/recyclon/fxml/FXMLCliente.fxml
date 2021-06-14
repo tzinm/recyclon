@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Polyline?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" onKeyPressed="#pulsarTecla" prefHeight="705.0" prefWidth="1202.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.zabalburu.recyclon.app.FXMLClienteController">
+    <stylesheets>
+        <URL value="@/net/zabalburu/recyclon/css/estilo1.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane layoutX="15.0" layoutY="107.0" prefHeight="586.0" prefWidth="1177.0" style="-fx-background-color: white; -fx-background-radius: 2em;" stylesheets="@../css/estilo1.css">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" />
+         </effect>
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="469.0" layoutX="790.0" layoutY="101.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="360.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color blue="0.3450980484485626" green="0.2823529541492462" red="0.18431372940540314" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color blue="0.6470588445663452" green="0.7921568751335144" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <PieChart fx:id="pieChart" labelLineLength="5.0" labelsVisible="false" layoutX="800.0" layoutY="117.0" onMousePressed="#mostrarPorcentaje" prefHeight="418.0" prefWidth="340.0" />
+            <Polyline layoutX="184.0" layoutY="126.0" onMousePressed="#mostrarTartaGeneral" points="967.0, -33.0, 967.0, -62.0, -155.0, -112.0, -155.0, -33.0" strokeType="INSIDE" strokeWidth="0.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color blue="0.3450980484485626" green="0.2823529541492462" red="0.18431372940540314" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.007662835249042145">
+                           <color>
+                              <Color blue="0.3450980484485626" green="0.2823529541492462" red="0.18431372940540314" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.584192439862543">
+                           <color>
+                              <Color blue="0.6451666951179504" green="0.7900000214576721" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color blue="0.6470588445663452" green="0.7921568751335144" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Polyline>
+            <Text fx:id="lblEstadoFormulario" fill="WHITE" layoutX="95.0" layoutY="74.0" onMousePressed="#mostrarTartaGeneral" strokeType="OUTSIDE" strokeWidth="0.0" text="Clientes">
+               <font>
+                  <Font name="Bank Gothic Medium BT" size="40.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="79.0" fitWidth="68.0" layoutX="35.0" layoutY="27.0" onMousePressed="#mostrarTartaGeneral" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/cliente2.png" />
+               </image>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+            <TextField fx:id="txtNombre" layoutX="261.0" layoutY="107.0" onKeyReleased="#validarNombre" prefHeight="29.0" prefWidth="351.0" />
+            <TextField fx:id="txtCuenta" layoutX="261.0" layoutY="152.0" onKeyReleased="#validarNCuenta" prefHeight="29.0" prefWidth="351.0" />
+            <Label layoutX="167.0" layoutY="107.0" text="Nombre:">
+               <font>
+                  <Font name="Bank Gothic Medium BT" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="167.0" layoutY="153.0" prefHeight="27.0" prefWidth="90.0" text="Nº Cuenta:">
+               <font>
+                  <Font name="Bank Gothic Medium BT" size="18.0" />
+               </font>
+            </Label>
+            <Button id="btnGuardar" fx:id="btnGuardar" layoutX="637.0" layoutY="121.0" mnemonicParsing="false" onAction="#guardar" stylesheets="@../css/estilo1.css" text="Guardar" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/guardar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Bank Gothic Light BT" size="13.0" />
+               </font>
+            </Button>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="42.0" layoutX="29.0" layoutY="190.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="738.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color blue="0.3450980484485626" green="0.2823529541492462" red="0.18431372940540314" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color blue="0.6470588445663452" green="0.7921568751335144" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <Button fx:id="btnNuevo" layoutX="233.0" layoutY="198.0" maxHeight="29.0" minHeight="29.0" mnemonicParsing="false" onAction="#agregar" prefHeight="29.0" prefWidth="92.0" text="Nuevo" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/agregarUser.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnModificar" layoutX="349.0" layoutY="198.0" maxHeight="29.0" minHeight="29.0" mnemonicParsing="false" onAction="#modificar" prefHeight="29.0" text="Modificar" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/modificarUser.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnEliminar" layoutX="465.0" layoutY="198.0" maxHeight="29.0" minHeight="29.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="29.0" prefWidth="92.0" stylesheets="@../css/estilo1.css" text="Eliminar" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/eliminarUser.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <TableView fx:id="tvCli" editable="true" fixedCellSize="0.0" layoutX="29.0" layoutY="241.0" onKeyPressed="#pulsarTecla" onMouseClicked="#seleccionTv" prefHeight="325.0" prefWidth="738.0" tableMenuButtonVisible="true">
+              <columns>
+                <TableColumn fx:id="tcNombre" prefWidth="344.0" text="Nombre del Cliente" />
+                <TableColumn fx:id="tcCuenta" prefWidth="392.0" text="Número de Cuenta" />
+              </columns>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <Label fx:id="lblSaldoxPagar" alignment="CENTER" layoutX="850.0" layoutY="532.0" minWidth="128.0" prefHeight="30.0" prefWidth="128.0" text="18.000,00 €" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Bank Gothic Light BT" size="20.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <Label fx:id="lblSaldoCobrado" alignment="CENTER" layoutX="978.0" layoutY="532.0" minWidth="139.0" prefHeight="30.0" prefWidth="139.0" text="39.500,00 €" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Bank Gothic Light BT" size="20.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <Label fx:id="lblpor1" alignment="CENTER" layoutX="833.0" layoutY="502.0" minWidth="70.0" prefHeight="30.0" prefWidth="70.0" text="\%" textAlignment="CENTER" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="Bank Gothic Light BT" size="20.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+            <Label fx:id="lblpor2" alignment="CENTER" layoutX="1029.0" layoutY="502.0" minWidth="68.0" prefHeight="30.0" prefWidth="68.0" text="\%" textAlignment="CENTER" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="Bank Gothic Light BT" size="20.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane id="panelInfo" fx:id="panelInfo" layoutX="14.0" layoutY="14.0" prefHeight="58.0" prefWidth="1177.0" style="-fx-background-radius: 2em;" stylesheets="@../css/estilo1.css">
+         <children>
+            <Text fx:id="textopantallaprincipal" fill="WHITE" layoutX="473.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Resumen General de Clientes" AnchorPane.rightAnchor="14.896484375" AnchorPane.topAnchor="8.626953125">
+               <font>
+                  <Font name="Bank Gothic Medium BT" size="30.0" />
+               </font>
+            </Text>
+         </children>
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX" />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>

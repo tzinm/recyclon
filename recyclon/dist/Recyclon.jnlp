@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Recyclon.jnlp">
+  <information>
+    <title>Recyclon</title>
+    <vendor>Aritz</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="Recyclon.jar" size="173094" download="eager" />
+    <jar href="lib\controlsfx-8.40.12.jar" size="996389" download="eager" />
+    <jar href="lib\ojdbc8.jar" size="4409400" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="800" height="600" main-class="net.zabalburu.recyclon.app.Recyclon"  name="Recyclon" />
+  <update check="always"/>
+</jnlp>
