@@ -87,7 +87,7 @@ Esta es la base que nos ha permitido comenzar con el desarrollo de la aplicació
 
 [![Recyclon vídeo](img/Recyclon.png "Recyclon vídeo")](https://youtu.be/ak4CLZUZyiI)
 
-Para poder hacer uso de la aplicación es necesario descargarse el contenido que se encuentra bajo el directorio **¿src?**. En este directorio se encuentra todo el código de la aplicación, el código desarrollado en el IDE Apache NetBeans. Además de esto, es importante tener en cuenta lo siguiente:
+Para poder hacer uso de la aplicación es necesario descargarse el contenido que se encuentra bajo el directorio **recyclon**. En este directorio se encuentra todo el código de la aplicación, el código desarrollado en el IDE Apache NetBeans. Además de esto, es importante tener en cuenta lo siguiente:
 
 1. Dependencias de la aplicación.
 
